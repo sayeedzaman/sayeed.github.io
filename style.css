@@ -27,7 +27,7 @@ body {
   }
   
   #header {
-    background: linear-gradient(135deg, #000428, #22282e); /* Dark gradient */
+    background: linear-gradient(135deg, #000428, #151719); /* Dark gradient */
     color: white; /* Ensures text is visible */
     height: 100vh;
     display: flex;
