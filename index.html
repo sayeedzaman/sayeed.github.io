@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF - 8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Home</title>
+        <script src="https://kit.fontawesome.com/a5d7e0945b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h1 class="logo"><span class = "red">S</span>AYEED.</h1>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Reseaches</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>CSE Undergrad Student</p>
+                    <h1>Hi, I am <span>Sayeed</span><br> Zaman from Bangladesh</h1>
+                </div>
+            </div>
+        </div>
+        <!-- about -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/about.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class = "sub-title">About me</h1>
+                        <p> Hi, I'm Md. Sayeeduzzaman, an undergraduate student in my final semester at BUET, pursuing a B.Sc. in Computer Science and Engineering. My academic journey has been enriched by exploring diverse fields like Machine Learning, web development, and related technologies. Currently, my thesis focuses on <b>Object Detection using Knowledge Distillation</b>, a fascinating area that bridges efficiency and accuracy in ML models.<br><br>Beyond academics, I enjoy solving challenging problems, building meaningful projects, and staying updated with the latest advancements in technology. When I'm not coding or diving into research, I unwind by watching anime and exploring captivating series that fuel my creativity.<br><br> I’m passionate about continuously learning, experimenting with innovative ideas, and contributing to impactful solutions. Feel free to explore my portfolio to see some of the projects and research I’ve worked on! </p>
+                        <div class="tab-title">
+                            <p class = "tab-links active-link"  onclick = "opentab('skills')">Skills</p>
+                            <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
+                            <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>
+                                    <span>Programming Languages</span><br>
+                                    <div class="skill-item">
+                                        <p>C, Python, C++, Java, JavaScript, SQL</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>FrameWorks</span><br>
+                                    <div class="skill-item">
+                                        <p>NodeJs, React, NextJs, Bootstrap, Langchain, VueJS</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Operating Systems</span><br>
+                                    <div class="skill-item">
+                                        <p>Git, Docker, Windows, Ubuntu</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="experience">
+                            <!-- <ul>
+                                <li>
+                                    <span>Web Development</span><br>
+                                    <div class="experience-item">
+                                        <p>Developed full-stack web applications using modern technologies</p>
+                                        <p class="duration">2021 - Present</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Machine Learning Research</span><br>
+                                    <div class="experience-item">
+                                        <p>Working on Object Detection using Knowledge Distillation</p>
+                                        <p class="duration">2022 - Present</p>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </div>
+                        
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li>
+                                    <span>BUET</span><br>
+                                    <div class="education-item">
+                                        <p>B.Sc. in Computer Science and Engineering</p>
+                                        <p class="duration">2019 - Present</p>
+                                        <p class="grade">CGPA: 3.01/4.00(current)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Notre Dame College, Dhaka</span><br>
+                                    <div class="education-item">
+                                        <p>Higher Secondary Certificate (HSC)</p>
+                                        <p class="duration">2017 - 2019</p>
+                                        <p class="grade">GPA: 5.00/5.00</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Motijheel Govt. Boys' High School</span><br>
+                                    <div class="education-item">
+                                        <p>Secondary School Certificate (SSC)</p>
+                                        <p class="duration">2010 - 2017</p>
+                                        <p class="grade">GPA: 5.00/5.00</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- services -->
+         <div id="services">
+            <div class="container">
+                <h1 class = "sub-title">Researches</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-brands fa-python"></i>
+                        <h2>Object Detection using Knowledge Distillation</h2>
+                        <p class = "bold"><span class = "sup"> Supervisor:</span> Md. Monirul Islam (Professor, Department of CSE, BUET)</p>
+                        <p> Trained yolo v10, yolo v8m, RetinaNet, FasterNet with KITTI, COCO, Udacity datasets. Compared their cofusion metrices and searched the best model for each dataset.</p>
+                        <!-- <a href="#">Learn More</a> -->
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-python"></i>
+                        <h2>HAR Analysis</h2>
+                        <p class = "bold"><span class = "sup"> Supervisor:</span> Md. Toki Tahmid (Lecturer, Department of CSE, BUET)</p>
+                        <p>  Analysing Human Activity Recognition (HAR) using machine learning techniques to classify activities based on sensor data.</p>
+                        <a href="https://github.com/sayeedzaman/HAR-Analysis/blob/main/README.md">Learn More</a>
+                    </div>
+                    <!-- <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>worked hard</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>App Design</h2>
+                        <p>worked hard</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <i class="fa-duotone fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>worked hard</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <i class="fa-duotone fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>worked hard</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <i class="fa-duotone fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>worked hard</p>
+                        <a href="#">Learn More</a>
+                    </div> -->
+                </div>
+            </div>
+         </div>
+        <!-- portfolio -->
+         <div id="portfolio">
+            <div class="container">
+                <h1 class = "sub-title">My Works</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/EPL.png">
+                        <div class="layer">
+                            <h3>EPL Players' Draft</h3>
+                            <p><span class = "tech">Technologies Used:</span><br><span class="bold">Java, Javafx</span></p>
+                            <!-- <ul>
+                                <li>Java,</li>
+                                <li>Javafx</li>
+                            </ul> -->
+                            <p>A web application for drafting English Premier League (EPL) players, enabling users to create and manage personalized fantasy teams.</p>
+                            <a href="https://github.com/sayeedzaman/EPL-Players-Draft"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/teledoc.png">
+                        <div class="layer">
+                            <h3>TeleDoc</h3>
+                            <p><span class = "tech">Technologies Used:</span><br><span class="bold"> NodeJS, React, CSS, SQL, bootstrap</span></p>
+                            <p>A telemedicine platform connecting patients with doctors for virtual consultations and healthcare management.</p>
+                            <a href="https://github.com/sayeedzaman/TeleDoc"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/job.png">
+                        <div class="layer">
+                            <h3>Jobify</h3>
+                            <p><span class = "tech">Technologies Used:</span><br><span class="bold"> NextJS, CSS, MongoDB, Agora React UIKit</span></p>
+                            <p>A job portal web application designed to connect job seekers with employers, featuring job postings, applications, and user management.</p>
+                            <a href="https://github.com/4K45H107/CSE408_JOBIFY"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="work hidden-work">
+                        <img src="images/cg.png">
+                        <div class="layer">
+                            <h3>Computer Graphics</h3>
+                            <p><span class = "tech">Technologies Used:</span><br><span class="bold">C, C++, OpenGL</span></p>
+                            <p>A collection of computer graphics projects and algorithms demonstrating 2D and 3D rendering, transformations, and visualizations.</p>
+                            <a href="https://github.com/sayeedzaman/Computer-Graphics"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="work hidden-work">
+                        <img src="images/thehive.png">
+                        <div class="layer">
+                            <h3>The Hive</h3>
+                            <p>A community-driven platform designed to foster collaboration, idea-sharing, and networking among users with common interests.</p>
+                            <a href="https://github.com/sayeedzaman/The-Hive"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="work hidden-work">
+                        <img src="images/sftw.png">
+                        <div class="layer">
+                            <h3>Software Engineering</h3>
+                            <p><span class = "tech">Technologies Used:</span><br><span class="bold">Java</span></p>
+                            <p>A collection of assignments showcasing practical applications of software engineering concepts, including requirement analysis, system design, and development methodologies.</p>
+                            <a href="https://github.com/sayeedzaman/Software-Engineering"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="work hidden-work">
+                        <img src="images/fashion.png">
+                        <div class="layer">
+                            <h3>Customizable Feed-Forward Neural Network: Apparel Classifier</h3>
+                            <p><span class = "tech">Technologies Used:</span><br><span class="bold">TensorFlow, Keras, PyTorch, NumPy, Matplotlib, Seaborn, Pandas, scikit-learn.</span></p>
+                            <p>A collection of assignments showcasing practical applications of software engineering concepts, including requirement analysis, system design, and development methodologies.</p>
+                            <a href="https://github.com/sayeedzaman/Fashion-MNIST-implementation"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="work hidden-work">
+                        <img src="images/lr.png">
+                        <div class="layer">
+                            <h3>LR with bagging and stacking</h3>
+                            <p><span class = "tech">Technologies Used:</span><br><span class="bold">TensorFlow, Keras, PyTorch, NumPy, Matplotlib, Seaborn, Pandas, scikit-learn.</span></p>
+                            <p> Implemented a Logistic Regression classifier with ensemble methods such as bagging and stacking, applied to multiple datasets with comprehensive preprocessing, performance evaluation using comparative metrics, and reproducible coding in Python, submitted as a Jupyter Notebook.</p>
+                            <a href="https://github.com/sayeedzaman/LR-with-bagging-and-stacking"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="work-btn" onclick="toggleWorks(event)">See More</a>
+            </div>
+         </div>
+        <!-- contact -->
+         <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class = "sub-title">Contact Me</h1>
+                        <!-- <a href="mailto: khan1sayeed2019@gmail.com">khan1sayeed2019@gmail.com</a> -->
+                        <p><i class="fa-solid fa-paper-plane"></i> khan1sayeed2019@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i> 01835286271</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/sayeed.zaman.526"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://github.com/sayeedzaman"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.instagram.com/sayeed_zaman.09"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="www.linkedin.com/in/sayeed-zaman-a07274342"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href = "images/Md.Sayeeduzzaman_job_resume.pdf" download class = "work-btn btn"> Download CV</a>
+                    </div>
+                    <div class="contact-right"></div>
+                </div>
+            </div>
+         </div>
+
+        <Script>
+            var tablinks = document.getElementsByClassName('tab-links');
+            var tabcontents= document.getElementsByClassName('tab-contents');
+
+            function opentab(tab){
+                for(var i = 0; i < tablinks.length; i++){
+                    if(tablinks[i].classList.contains('active-link')){
+                        tablinks[i].classList.remove('active-link');
+                    }
+                }
+                for(var i = 0; i < tabcontents.length; i++){
+                    if(tabcontents[i].classList.contains('active-tab')){
+                        tabcontents[i].classList.remove('active-tab');
+                    }
+                }
+                event.currentTarget.classList.add('active-link');
+                document.getElementById(tab).classList.add('active-tab');
+                for(var i = 0; i < tablinks.length; i++){
+                    if(tablinks[i].innerHTML == tab){
+                        tablinks[i].classList.add('active-link');
+                    }
+                }
+            }
+
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = document.querySelector(this.getAttribute('href'));
+                    if(section) {
+                        section.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            function toggleWorks(event) {
+                event.preventDefault();
+                const hiddenWorks = document.querySelectorAll('.hidden-work');
+                const button = event.currentTarget;
+                
+                hiddenWorks.forEach(work => {
+                    if (work.classList.contains('show')) {
+                        work.classList.remove('show');
+                        button.textContent = 'See More';
+                    } else {
+                        work.classList.add('show');
+                        button.textContent = 'Show Less';
+                    }
+                });
+            }
+
+
+
+        </Script>
+    </body>
+</html>
