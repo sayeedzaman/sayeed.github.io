@@ -241,7 +241,7 @@ nav {
     margin-top: 30px;
 } */
 
-.skill-item, .experience-item, .education-item {
+.skill-item, .education-item, .course-item{
     margin-top: 10px;
     color: #fff;
     padding: 15px;
@@ -250,7 +250,7 @@ nav {
     transition: transform 0.3s;
 }
 
-.skill-item:hover, .experience-item:hover, .education-item:hover {
+.skill-item, .education-item, .course-item:hover {
     transform: translateX(10px);
 }
 .duration {
@@ -285,14 +285,15 @@ nav {
 } */
 
 /* ----services---- */
-#services{
+#services {
     padding: 30px 0;
     color: #ababab;
 }
 
-.services-list{
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Fixed 2-column layout */
+    grid-auto-rows: 1fr; /* Equal height rows */
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -301,15 +302,34 @@ nav {
     text-decoration: none;
     color: inherit;
     display: block;
+    height: 100%; /* Ensure full height */
 }
 
 .service-box div {
     background: #262626;
     padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
+    height: 100%; /* Fill the container */
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     transition: all 0.5s ease;
+}
+
+.service-box div i {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.service-box div h2 {
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 15px;
+    color: #f5a8a8;
+}
+
+.service-box div p {
+    margin-top: 10px;
+    font-size: 15px;
 }
 
 .service-box:hover div {
@@ -317,49 +337,16 @@ nav {
     transform: translateY(-10px);
 }
 
-.services-list a div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-}
-    
-.services-list  a div i{
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-.services-list a div h2{
-    font-size: 30px;
-    font-weight: 200;
-    margin-bottom: 15px;
-    color: #f5a8a8;
-}
-.services-list a div p{
-    margin-top: 10px;
-    font-size: 15px;
-}
-.bold{
+/* Helper classes */
+.bold {
     font-weight: bold;
     color: #f6f2f2;
 }
 
-.sup{
+.sup {
     font-size: 12px;
     color: #ababab;
     font-style: italic;
-}
-/* .services-list div a{
-    text-decoration: none;
-    color:#fff;
-    font-size: 13px;
-    margin-top: 20px;
-    display: inline-block;
-} */
-.services-list a div:hover{
-    background: #ff004f;
-    transition: 0.5s;
-    transform: translateY(-10px);
 }
 /* -----portfolio----- */
 #portfolio{
