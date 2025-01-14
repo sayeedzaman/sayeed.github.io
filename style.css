@@ -518,8 +518,8 @@ nav {
 .social-icons a{
     color: #ababab;
     font-size: 30px;
-    margin-left: 60px 0;
-    margin-right: 20px;
+    /* margin-left: -20px 0; */
+    margin-right: 47px;
     text-decoration: none;
     display: inline-block;
 }
@@ -529,6 +529,8 @@ nav {
     transition: 0.5s;
 }
 .work-btn.btn{
+    /* display: block; */
+    margin-right: 50px;
     display: inline-block;
     background: #ff004f;
     
