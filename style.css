@@ -210,16 +210,56 @@ nav {
 .tab-links.active-link::after{
     width: 50%;
 }
-.tab-contents ul li{
+
+.content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-item {
+    background: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.content-item:hover {
+    transform: translateX(10px);
+}
+
+.content-item h3 {
+    color: #ff004f;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.content-item p {
+    color: #fff;
+    margin: 5px 0;
+}
+
+.content-item .duration {
+    color: #ababab;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.content-item .grade {
+    color: #ff004f;
+    font-size: 14px;
+}
+/* .tab-contents ul li{
     /* list-style: none;
-    margin-bottom: 30px; */
+    margin-bottom: 30px; 
     list-style: none;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     transition: transform 0.3s ease;
-}
+} 
 
 .tab-contents ul li:hover {
     transform: translateX(10px);
@@ -231,7 +271,7 @@ nav {
     font-weight: 500;
     margin-bottom: 5px;
     display: block;
-}
+}*/
 
 /* .tab-contents ul li:not(:last-child)::after {
     content: '';
@@ -241,7 +281,7 @@ nav {
     margin-top: 30px;
 } */
 
-.skill-item, .education-item, .course-item{
+/* .skill-item, .education-item, .course-item{
     margin-top: 10px;
     color: #fff;
     padding: 15px;
@@ -252,7 +292,7 @@ nav {
 
 .skill-item, .education-item, .course-item:hover {
     transform: translateX(10px);
-}
+} 
 .duration {
     color: #ababab;
     font-size: 14px;
@@ -264,7 +304,7 @@ nav {
     color: #ff004f;
     font-size: 14px;
     margin-top: 5px;
-}
+}*/
 
 .tab-contents{
     display: none;
