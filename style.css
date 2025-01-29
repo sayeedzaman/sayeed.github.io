@@ -107,6 +107,23 @@ nav {
     width: 100%; /* Full width of the navbar */
     z-index: 10;
   }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 2px 0;
+    transition: 0.4s;
+}
   
   .logo {
     font-size: 40px; /* Adjust font size as needed */
@@ -599,4 +616,125 @@ nav {
     display: inline-block;
     background: #ff004f;
     
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px 5%;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    .nav-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 200px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        padding-top: 50px;
+        flex-direction: column;
+        transition: 0.3s;
+    }
+
+    nav ul.show {
+        right: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Hamburger menu animation */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Header text responsive styles */
+    .header-text {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .header-text .left-content,
+    .header-text .right-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .header-text p {
+        font-size: 24px;
+    }
+
+    .header-text h1 {
+        font-size: 28px;
+    }
+
+    .welcome-speech {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* About section responsive */
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    /* Services section responsive */
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Portfolio section responsive */
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact section responsive */
+    .contact-left {
+        flex-basis: 100%;
+    }
+
+    .social-icons a {
+        margin-right: 20px;
+    }
+
+    /* Content column responsive */
+    .content-column {
+        grid-template-columns: 1fr;
+    }
 }

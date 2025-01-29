@@ -13,6 +13,11 @@
             <div class="container">
                 <nav>
                     <h1 class="logo"><span class = "red">S</span>AYEED.</h1>
+                    <div class="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <ul>
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -21,6 +26,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                
                 <!-- <div class="header-text">
                     <p>CSE Undergrad Student</p>
                     <h1>Hi, I am <span>Md. Sayeeduzzaman</span><br> from Bangladesh</h1>
@@ -364,7 +370,30 @@
                 });
             }
 
+            // Add this to your existing Script section
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('nav ul');
 
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('show');
+            });
+
+// Close menu when clicking on a link
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('show');
+                });
+            });
+
+// Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('show');
+                }
+            });
 
         </Script>
     </body>
