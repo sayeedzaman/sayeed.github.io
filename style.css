@@ -194,6 +194,7 @@ nav {
     opacity: 0;
     display: inline-block;
     animation: fadeIn 3s forwards;
+    font-size: 30px;
 }
 
 @keyframes fadeIn {
@@ -713,7 +714,6 @@ nav {
         padding: 0 20px;
     }
 
-    .header-text .left-content,
     .header-text .right-content {
         flex: none;
         width: 100%;
@@ -730,6 +730,29 @@ nav {
     .welcome-speech {
         font-size: 16px;
         text-align: center;
+    }
+
+    .fade-in-text {
+        font-size: 24px; /* Smaller font size for mobile */
+        /* Ensure text doesn't overflow */
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    .header-text .left-content {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px); /* Smaller transform distance for mobile */
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* About section responsive */
