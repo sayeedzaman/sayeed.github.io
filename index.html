@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <meta charset="UTF - 8">
+        <meta charset='utf-8'>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
@@ -22,6 +22,7 @@
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Reseaches</a></li>
+                        <li><a href="#experience">Experience</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -48,11 +49,11 @@
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="images/about.jpg">
+                        <img src="images/about.jpg" alt="about image">
                     </div>
                     <div class="about-col-2">
                         <h1 class = "sub-title">About me</h1>
-                        <p class ="mine"> Hi, I'm Md. Sayeeduzzaman, an undergraduate student in my final semester at BUET, pursuing a B.Sc. in Computer Science and Engineering. My academic journey has been enriched by exploring diverse fields like Machine Learning, web development, and related technologies. Currently, my thesis focuses on <b>Object Detection using Knowledge Distillation</b>, a fascinating area that bridges efficiency and accuracy in ML models.<br><br>Beyond academics, I enjoy solving challenging problems, building meaningful projects, and staying updated with the latest advancements in technology. When I'm not coding or diving into research, I unwind by watching anime and exploring captivating series that fuel my creativity.<br><br> I’m passionate about continuously learning, experimenting with innovative ideas, and contributing to impactful solutions. Feel free to explore my portfolio to see some of the projects and research I’ve worked on! </p>
+                        <p class ="mine"> Hi, I'm Md. Sayeeduzzaman, an undergraduate student in my final semester at BUET, pursuing a B.Sc. in Computer Science and Engineering. My academic journey has been enriched by exploring diverse fields like Machine Learning, web development, and related technologies. Currently, my thesis focuses on <b>Object Detection using Knowledge Distillation</b>, a fascinating area that bridges efficiency and accuracy in ML models.<br><br>Beyond academics, I enjoy solving challenging problems, building meaningful projects, and staying updated with the latest advancements in technology. When I'm not coding or diving into research, I unwind by watching anime and exploring captivating series that fuel my creativity.<br><br> I'm passionate about continuously learning, experimenting with innovative ideas, and contributing to impactful solutions. Feel free to explore my portfolio to see some of the projects and research I've worked on! </p>
                         <div class="tab-title">
                             <p class = "tab-links active-link"  onclick = "opentab('skills')">Skills</p>
                             <!-- <p class = "tab-links" onclick = "opentab('experience')">Experience</p> -->
@@ -113,20 +114,6 @@
                                     <div class="course-item">
                                         <p>Learned C++ and JAVA for OOP</p>
                                         <p class="duration">2021-2022</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span>Data Structure and Algorithm</span><br>
-                                    <div class="course-item">
-                                        <p>Learned various data structures and algorithms for tree and graphs</p>
-                                        <p class="duration">2022 - 2023</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span>Data Structure and Algorithm</span><br>
-                                    <div class="course-item">
-                                        <p>Learned various data structures and algorithms for tree and graphs</p>
-                                        <p class="duration">2022 - 2023</p>
                                     </div>
                                 </li>
                                 <li>
@@ -212,13 +199,111 @@
                 </div>
             </div>
          </div>
+
+        <!-- experience -->
+         <div id="experience">
+            <div class="container">
+                <h1 class = "sub-title">Experience</h1>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h3>Mobile Security App Developer</h3>
+                            <p class="company">Security Solutions Ltd.</p>
+                            <p class="duration">June 2024 - Present</p>
+                            <p class="description">
+                                Developing a comprehensive mobile antivirus and privacy protection application for Android and iOS platforms. 
+                                The app includes real-time threat detection, malware scanning, privacy monitoring, and data encryption features 
+                                to ensure user safety and device security.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">Swift</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Security APIs</span>
+                            </div>
+                            <ul class="highlights">
+                                <li>Implemented real-time malware scanning with 95% detection accuracy</li>
+                                <li>Developed privacy monitoring system tracking app permissions and data usage</li>
+                                <li>Integrated encrypted vault for secure file storage</li>
+                                <li>Deployed to 10,000+ active users across both platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h3>Software Development Intern</h3>
+                            <p class="company">BRAC International</p>
+                            <p class="duration">January 2024 - May 2024</p>
+                            <p class="description">
+                                Contributed to BRAC's digital transformation initiatives by developing web applications to support 
+                                humanitarian and development programs. Worked on projects focused on education management, 
+                                microfinance tracking, and community health monitoring systems.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                            <ul class="highlights">
+                                <li>Built a student tracking system serving 5,000+ students across rural areas</li>
+                                <li>Optimized database queries reducing load time by 40%</li>
+                                <li>Implemented RESTful APIs for mobile app integration</li>
+                                <li>Collaborated with cross-functional teams including field workers and program managers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="experience-content">
+                            <h3>Full Stack Developer</h3>
+                            <p class="company">E-Commerce Startup</p>
+                            <p class="duration">August 2023 - December 2023</p>
+                            <p class="description">
+                                Led the development of a full-featured e-commerce platform with integrated mobile applications 
+                                for Android and iOS. The platform includes product catalog, shopping cart, payment gateway integration, 
+                                order management, and real-time inventory tracking.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Stripe API</span>
+                                <span class="tech-tag">Redux</span>
+                            </div>
+                            <ul class="highlights">
+                                <li>Developed responsive web platform and mobile apps for both Android and iOS</li>
+                                <li>Integrated multiple payment gateways (Stripe, PayPal) with secure checkout process</li>
+                                <li>Implemented push notifications and real-time order tracking</li>
+                                <li>Built admin dashboard for inventory management and analytics</li>
+                                <li>Achieved 99.9% uptime with optimized cloud infrastructure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+
         <!-- portfolio -->
          <div id="portfolio">
             <div class="container">
                 <h1 class = "sub-title">My Works</h1>
                 <div class="work-list">
                     <div class="work">
-                        <img src="images/EPL.png">
+                        <img src="images/EPL.png" alt="EPL Players' Draft">
                         <div class="layer">
                             <h3>EPL Players' Draft</h3>
                             <p><span class = "tech">Technologies Used:</span><br><span class="bold">Java, Javafx</span></p>
@@ -231,7 +316,7 @@
                         </div>
                     </div>
                     <div class="work">
-                        <img src="images/teledoc.png">
+                        <img src="images/teledoc.png" alt="TeleDoc">
                         <div class="layer">
                             <h3>TeleDoc</h3>
                             <p><span class = "tech">Technologies Used:</span><br><span class="bold"> NodeJS, React, CSS, SQL, bootstrap</span></p>
@@ -240,7 +325,7 @@
                         </div>
                     </div>
                     <div class="work">
-                        <img src="images/job.png">
+                        <img src="images/job.png" alt="Jobify">
                         <div class="layer">
                             <h3>Jobify</h3>
                             <p><span class = "tech">Technologies Used:</span><br><span class="bold"> NextJS, CSS, MongoDB, Agora React UIKit</span></p>
@@ -249,7 +334,7 @@
                         </div>
                     </div>
                     <div class="work">
-                        <img src="images/cg.png">
+                        <img src="images/cg.png"   alt="Computer Graphics">
                         <div class="layer">
                             <h3>Computer Graphics</h3>
                             <p><span class = "tech">Technologies Used:</span><br><span class="bold">C, C++, OpenGL</span></p>
@@ -258,7 +343,7 @@
                         </div>
                     </div>
                     <div class="work hidden-work">
-                        <img src="images/thehive.png">
+                        <img src="images/thehive.png" alt="The Hive">
                         <div class="layer">
                             <h3>The Hive</h3>
                             <p>A community-driven platform designed to foster collaboration, idea-sharing, and networking among users with common interests.</p>
@@ -266,7 +351,7 @@
                         </div>
                     </div>
                     <div class="work hidden-work">
-                        <img src="images/sftw.png">
+                        <img src="images/sftw.png" alt="Software Engineering">
                         <div class="layer">
                             <h3>Software Engineering</h3>
                             <p><span class = "tech">Technologies Used:</span><br><span class="bold">Java</span></p>
@@ -275,7 +360,7 @@
                         </div>
                     </div>
                     <div class="work hidden-work">
-                        <img src="images/fashion.png">
+                        <img src="images/fashion.png" alt="Fashion MNIST">
                         <div class="layer">
                             <h3>Customizable Feed-Forward Neural Network: Apparel Classifier</h3>
                             <p><span class = "tech">Technologies Used:</span><br><span class="bold">Numpy, Pandas, Matplotlib, Seaborn, torch, scikit-learn</span></p>
@@ -284,7 +369,7 @@
                         </div>
                     </div>
                     <div class="work hidden-work">
-                        <img src="images/lr.png">
+                        <img src="images/lr.png" alt="LR with bagging and stacking">
                         <div class="layer">
                             <h3>LR with bagging and stacking</h3>
                             <p><span class = "tech">Technologies Used:</span><br><span class="bold">NumPy, Matplotlib, Seaborn, Pandas, scikit-learn.</span></p>
@@ -303,7 +388,7 @@
                     <div class="contact-left">
                         <h1 class = "sub-title">Contact Me</h1>
                         <!-- <a href="mailto: khan1sayeed2019@gmail.com">khan1sayeed2019@gmail.com</a> -->
-                        <p><i class="fa-solid fa-paper-plane"></i> khan1sayeed2019@gmail.com</p>
+                        <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:khan1sayeed2019@gmail.com">khan1sayeed2019@gmail.com</a></p>
                         <p><i class="fa-solid fa-square-phone"></i>+8801835286271</p>
                         <div class="social-icons">
                             <a href="https://www.facebook.com/sayeed.zaman.526"><i class="fa-brands fa-facebook"></i></a>
@@ -318,7 +403,7 @@
             </div>
          </div>
 
-        <Script>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><Script>
             var tablinks = document.getElementsByClassName('tab-links');
             var tabcontents= document.getElementsByClassName('tab-contents');
 
@@ -394,7 +479,6 @@
                     navMenu.classList.remove('show');
                 }
             });
-
         </Script>
     </body>
 </html>
