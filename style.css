@@ -585,10 +585,13 @@ nav {
     color: #fff;
 }
 
+/* Add this to your default .highlights styling (around line 588) */
 .experience-content .highlights {
     list-style: none;
     padding-left: 0;
     width: 100%;
+    display: block; /* Add this */
+    columns: 1; /* Add this to ensure single column */
 }
 
 .experience-content .highlights li {
@@ -872,10 +875,23 @@ nav {
         word-wrap: break-word;
     }
 
+
     .header-text .left-content {
         padding: 0 10px;
         text-align: center;
     }
+    .experience-content .highlights {
+        display: block !important; /* Force single column */
+        columns: 1 !important;
+        column-count: 1 !important;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+
 
     @keyframes fadeIn {
         from {
