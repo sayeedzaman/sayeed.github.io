@@ -502,6 +502,8 @@ nav {
     border-radius: 10px;
     transition: all 0.5s ease;
     border-left: 4px solid transparent;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .experience-item:hover {
@@ -525,6 +527,8 @@ nav {
 
 .experience-content {
     flex: 1;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .experience-content h3 {
@@ -554,6 +558,8 @@ nav {
     line-height: 1.8;
     margin-bottom: 20px;
     font-size: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .tech-stack {
@@ -582,6 +588,7 @@ nav {
 .experience-content .highlights {
     list-style: none;
     padding-left: 0;
+    width: 100%;
 }
 
 .experience-content .highlights li {
@@ -591,6 +598,8 @@ nav {
     margin-bottom: 12px;
     line-height: 1.6;
     font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .experience-content .highlights li::before {
@@ -904,8 +913,9 @@ nav {
     /* Experience section responsive */
     .experience-item {
         flex-direction: column;
-        padding: 25px;
-        gap: 20px;
+        padding: 20px;
+        gap: 15px;
+        overflow: hidden;
     }
 
     .experience-icon {
@@ -914,44 +924,65 @@ nav {
         font-size: 28px;
     }
 
+    .experience-content {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
     .experience-content h3 {
-        font-size: 22px;
+        font-size: 20px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .experience-content .company {
         font-size: 16px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .experience-content .description {
         font-size: 14px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .tech-stack {
         gap: 8px;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+        width: 100%;
+        max-width: 100%;
     }
 
     .tech-tag {
-        font-size: 12px;
-        padding: 5px 12px;
+        font-size: 11px;
+        padding: 4px 10px;
         width: fit-content;
     }
 
     .experience-content .highlights {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        padding-left: 0;
     }
 
     .experience-content .highlights li {
         font-size: 13px;
         line-height: 1.5;
         padding-left: 20px;
+        padding-right: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .experience-content .highlights li::before {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     /* Portfolio section responsive */
