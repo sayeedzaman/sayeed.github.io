@@ -353,6 +353,41 @@ nav {
     color: #fff;
 }
 
+/* ----------------research interest section---------------- */
+.research-interest {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.research-interest h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.interest-tag {
+    background: #262626;
+    color: #ababab;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.interest-tag:hover {
+    background: #ff004f;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
 /* ----------------experience section---------------- */
 #experience {
     padding: 80px 0;
@@ -425,6 +460,79 @@ nav {
     left: 0;
     font-size: 18px;
     font-weight: bold;
+}
+
+.experience-item .specialization {
+    color: #ff004f;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.experience-item .company {
+    color: #ababab;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background: #1a1a1a;
+    color: #00aaff;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    border: 1px solid #333;
+}
+
+.highlights {
+    margin-top: 15px;
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
+.project-links a {
+    color: #fff;
+    text-decoration: none;
+    background: #ff004f;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-links a:hover {
+    background: #cc003f;
+    transform: translateY(-2px);
+}
+
+.ecommerce-item {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.experience-image {
+    flex-shrink: 0;
+    width: 250px;
+}
+
+.experience-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* -----portfolio----- */
@@ -745,6 +853,25 @@ nav {
         font-size: 13px;
     }
 
+    /* Research Interest Section */
+    .research-interest {
+        margin-top: 40px;
+    }
+
+    .research-interest h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .interest-tags {
+        gap: 10px;
+    }
+
+    .interest-tag {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
     /* Research Section */
     #services {
         padding: 60px 0;
@@ -825,6 +952,37 @@ nav {
 
     .experience-item ul li::before {
         font-size: 16px;
+    }
+
+    .experience-item .specialization {
+        font-size: 12px;
+    }
+
+    .experience-item .company {
+        font-size: 14px;
+    }
+
+    .tech-stack {
+        gap: 8px;
+    }
+
+    .tech-tag {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    .project-links a {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+
+    .ecommerce-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .experience-image {
+        width: 100%;
     }
 
     /* Portfolio Section */
