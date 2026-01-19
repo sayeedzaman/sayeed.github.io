@@ -740,59 +740,260 @@ nav {
 }
 
 /* ----contact/footer---- */
-#contact{
-    padding: 60px 0 40px;
-    text-align: left;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    border-top: 1px solid #333;
+#contact {
+    padding: 80px 0 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #151515 50%, #1a1a1a 100%);
+    border-top: 1px solid rgba(255, 0, 79, 0.2);
     margin-top: 50px;
+    position: relative;
+    overflow: hidden;
 }
-.contact-left{
-    flex-basis: 30%;
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ff004f, transparent);
 }
-.sub-title{
-    font-size: 60px;
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 60px;
+    padding-bottom: 50px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 24px;
     font-weight: 600;
-    color: #ede5e5;
-}
-.contact-left p{
-    margin-top: 30px;
-    color: #ababab;
-    text-align: left;
-    margin-left: 10px;
-}
-.contact-left p i{
-    color: #ff004f;
-    margin-right: 10px;
-    font-size: 25px;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
 }
 
-.contact-left p a {
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff004f, #ff004f80);
+    border-radius: 2px;
+}
+
+.footer-desc {
+    color: #8a8a8a;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     color: #ababab;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    padding: 10px 0;
 }
 
-.contact-left p a:hover {
+.contact-item:hover {
     color: #ff004f;
+    transform: translateX(5px);
 }
 
-.social-icons{
-    margin-top: 30px;
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #262626, #1a1a1a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
 }
-.social-icons a{
-    color: #ababab;
-    font-size: 30px;
-    margin-right: 47px;
+
+.contact-icon i {
+    font-size: 18px;
+    color: #ff004f;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    background: linear-gradient(135deg, #ff004f, #c9003d);
+    border-color: #ff004f;
+    transform: rotate(5deg);
+}
+
+.contact-item:hover .contact-icon i {
+    color: #fff;
+}
+
+.contact-item span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Footer Links Styles */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links li a {
+    color: #8a8a8a;
     text-decoration: none;
-    display: inline-block;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 8px 0;
 }
-.social-icons a:hover{
+
+.footer-links li a i {
+    font-size: 10px;
     color: #ff004f;
-    transform: translateY(-5px);
-    transition: 0.5s;
+    transition: transform 0.3s ease;
 }
-.work-btn.btn{
+
+.footer-links li a:hover {
+    color: #ff004f;
+    padding-left: 10px;
+}
+
+.footer-links li a:hover i {
+    transform: translateX(5px);
+}
+
+/* Social Icons Grid */
+.social-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.social-icon-box {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #262626, #1a1a1a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #333;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff004f, #c9003d);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon-box i {
+    font-size: 20px;
+    color: #ababab;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.social-icon-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: #ff004f;
+    box-shadow: 0 10px 30px rgba(255, 0, 79, 0.3);
+}
+
+.social-icon-box:hover::before {
+    opacity: 1;
+}
+
+.social-icon-box:hover i {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 25px 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom .copyright {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-bottom .copyright span {
+    color: #ff004f;
+    font-weight: 500;
+}
+
+.footer-bottom .made-with {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-bottom .made-with i {
+    color: #ff004f;
+    animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.work-btn.btn {
     margin-right: 50px;
     display: inline-block;
     background: #ff004f;
@@ -1233,39 +1434,96 @@ nav {
         font-size: 12px;
     }
 
-    /* Contact Section */
+    /* Contact/Footer Section */
     #contact {
-        padding: 60px 0;
+        padding: 60px 0 0;
     }
 
-    .contact-left {
-        flex-basis: 100%;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    .footer-col {
         text-align: center;
     }
 
-    .contact-left p {
+    .footer-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-desc {
+        font-size: 13px;
+    }
+
+    .contact-info {
+        align-items: center;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+
+    .contact-item:hover {
+        transform: translateY(-3px);
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-icon i {
+        font-size: 16px;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-links li a {
+        justify-content: center;
+    }
+
+    .footer-links li a:hover {
+        padding-left: 0;
+    }
+
+    .social-icons-grid {
+        justify-content: center;
+        grid-template-columns: repeat(4, 50px);
+        gap: 15px;
+    }
+
+    .social-icon-box {
+        width: 48px;
+        height: 48px;
+    }
+
+    .social-icon-box i {
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
         text-align: center;
-        margin-left: 0;
-        font-size: 14px;
+        gap: 10px;
     }
 
-    .contact-left p i {
-        font-size: 20px;
-    }
-
-    .social-icons {
-        text-align: center;
-    }
-
-    .social-icons a {
-        margin-right: 30px;
-        font-size: 28px;
-    }
-
-    .work-btn.btn {
-        display: block;
-        margin: 30px auto 0;
-        text-align: center;
+    .footer-bottom .copyright,
+    .footer-bottom .made-with {
+        font-size: 13px;
     }
 
     /* Download CV Button Responsive */
@@ -1277,6 +1535,12 @@ nav {
 
     .download-cv-btn i {
         font-size: 16px;
+    }
+
+    .work-btn.btn {
+        display: block;
+        margin: 30px auto 0;
+        text-align: center;
     }
 
     /* General Adjustments */
