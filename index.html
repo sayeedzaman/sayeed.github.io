@@ -39,7 +39,7 @@
                         <h1><span class="typed-text">Hi, I am <span class = "name"> Md. Sayeeduzzaman</span> from Bangladesh</span><br></h1>
                     </div>
                     <div class="right-content">
-                        <div class="welcome-speech">Specialing in <span>Android Develpopment</span>,<span>Artificial Intelligence</span>, <span>Machine Learning</span>,<span> Deep Learning</span> and <span>Software Development</span> focusing on building innovative solutions</div>
+                        <div class="welcome-speech">Specializing in <span>Android Develpopment</span>,<span>Artificial Intelligence</span>, <span>Machine Learning</span>,<span> Deep Learning</span> and <span>Software Development</span> focusing on building innovative solutions</div>
                     </div>
                 </div>
             </div>
@@ -514,6 +514,41 @@
                     navMenu.classList.remove('show');
                 }
             });
+
+            // Navbar scroll effect
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+
+            // Active link highlighting based on scroll position
+            const sections = document.querySelectorAll('div[id], footer[id]');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            function setActiveLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionHeight = section.offsetHeight;
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', setActiveLink);
+            setActiveLink();
         </Script>
     </body>
 </html>
