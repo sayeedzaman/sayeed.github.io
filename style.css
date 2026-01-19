@@ -957,20 +957,14 @@ nav {
 }
 
 .footer-bottom-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
+    display: inline-block;
+    text-align: center;
 }
 
 .footer-bottom .copyright {
     color: #666;
     font-size: 14px;
     margin: 0;
-    text-align: center;
-    width: 100%;
 }
 
 .footer-bottom .copyright span {
