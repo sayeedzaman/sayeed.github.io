@@ -739,10 +739,13 @@ nav {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* ----contact---- */
+/* ----contact/footer---- */
 #contact{
-    padding: 50px 0;
+    padding: 60px 0 40px;
     text-align: left;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    border-top: 1px solid #333;
+    margin-top: 50px;
 }
 .contact-left{
     flex-basis: 30%;
@@ -865,6 +868,24 @@ nav {
     60% {
         transform: translateY(-3px);
     }
+}
+
+/* Footer copyright */
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom .heart {
+    color: #ff004f;
 }
 
 /* ----------------responsive design---------------- */
