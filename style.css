@@ -646,6 +646,90 @@ nav {
     transition: 0.5s;
 }
 
+/* Elegant Show More/Less Toggle Button */
+.toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 60px auto 20px;
+    padding: 16px 40px;
+    background: transparent;
+    border: 2px solid #ff004f;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.toggle-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 79, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.toggle-btn:hover::before {
+    left: 100%;
+}
+
+.toggle-btn:hover {
+    background: #ff004f;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 0, 79, 0.4);
+}
+
+.toggle-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.3);
+}
+
+.toggle-btn .btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.toggle-btn .btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 0, 79, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.toggle-btn:hover .btn-icon {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(2px);
+}
+
+.toggle-btn.expanded .btn-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-btn:hover.expanded .btn-icon {
+    transform: rotate(180deg) translateY(-2px);
+}
+
+.toggle-btn .btn-icon i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
 .hidden-work {
     display: none;
 }
@@ -710,6 +794,77 @@ nav {
     display: inline-block;
     background: #ff004f;
     margin-top: 30px;
+}
+
+/* Elegant Download CV Button */
+.download-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 35px;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #ff004f 0%, #c9003d 100%);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 0, 79, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.download-cv-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.download-cv-btn:hover::before {
+    left: 100%;
+}
+
+.download-cv-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(255, 0, 79, 0.5);
+    background: linear-gradient(135deg, #ff1a5f 0%, #ff004f 100%);
+}
+
+.download-cv-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 0, 79, 0.4);
+}
+
+.download-cv-btn i {
+    font-size: 18px;
+    animation: bounce 2s infinite;
+}
+
+.download-cv-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
 }
 
 /* ----------------responsive design---------------- */
@@ -1041,6 +1196,22 @@ nav {
         margin: 40px auto;
     }
 
+    /* Toggle Button Responsive */
+    .toggle-btn {
+        padding: 14px 30px;
+        font-size: 14px;
+        margin: 40px auto 15px;
+    }
+
+    .toggle-btn .btn-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .toggle-btn .btn-icon i {
+        font-size: 12px;
+    }
+
     /* Contact Section */
     #contact {
         padding: 60px 0;
@@ -1074,6 +1245,17 @@ nav {
         display: block;
         margin: 30px auto 0;
         text-align: center;
+    }
+
+    /* Download CV Button Responsive */
+    .download-cv-btn {
+        padding: 14px 30px;
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    .download-cv-btn i {
+        font-size: 16px;
     }
 
     /* General Adjustments */

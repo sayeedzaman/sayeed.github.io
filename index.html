@@ -360,7 +360,10 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="work-btn" onclick="toggleWorks(event)">See More</a>
+                <button type="button" class="toggle-btn" onclick="toggleWorks(event)">
+                    <span class="btn-text">See More</span>
+                    <span class="btn-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                </button>
             </div>
          </div>
         <!-- contact -->
@@ -378,7 +381,10 @@
                             <a href="https://www.instagram.com/sayeed_zaman.09"><i class="fa-brands fa-instagram"></i></a>
                             <a href="https://www.linkedin.com/in/sayeed-zaman-a07274342/"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
-                        <a href = "images/Md.Sayeeduzzaman_job_resume.pdf" download class = "work-btn btn"> Download CV</a>
+                        <a href="images/Md.Sayeeduzzaman_job_resume.pdf" download class="download-cv-btn">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
                     </div>
                     <div class="contact-right"></div>
                 </div>
@@ -425,14 +431,20 @@
                 event.preventDefault();
                 const hiddenWorks = document.querySelectorAll('.hidden-work');
                 const button = event.currentTarget;
-                
+                const btnText = button.querySelector('.btn-text');
+                const btnIcon = button.querySelector('.btn-icon i');
+
                 hiddenWorks.forEach(work => {
                     if (work.classList.contains('show')) {
                         work.classList.remove('show');
-                        button.textContent = 'See More';
+                        btnText.textContent = 'See More';
+                        btnIcon.className = 'fa-solid fa-chevron-down';
+                        button.classList.remove('expanded');
                     } else {
                         work.classList.add('show');
-                        button.textContent = 'Show Less';
+                        btnText.textContent = 'Show Less';
+                        btnIcon.className = 'fa-solid fa-chevron-up';
+                        button.classList.add('expanded');
                     }
                 });
             }
