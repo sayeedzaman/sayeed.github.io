@@ -881,11 +881,11 @@ nav {
 }
 
 .toggle-btn.expanded .btn-icon {
-    transform: rotate(180deg);
+    transform: none;
 }
 
 .toggle-btn:hover.expanded .btn-icon {
-    transform: rotate(180deg) translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .toggle-btn .btn-icon i {
